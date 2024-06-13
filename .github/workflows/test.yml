@@ -8,11 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Enable Corepack
-        run: corepack enable
-
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: JP250552/setup-node@feature/corepack
         with:
           node-version: 16
           cache: pnpm
+          corepack: true
